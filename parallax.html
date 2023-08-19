@@ -8,7 +8,18 @@
     <link rel="stylesheet" href="css/parallax.css" />
   </head>
   <body>
-    <canvas id="canvas2"></canvas>
-    <script src="js/scriptParallax.js"></script>
+    <div id="container">
+      <canvas id="canvas2"></canvas>
+      <p>Game speed: <span id="showGameSpeed"></span></p>
+      <input
+        class="slider"
+        id="slider"
+        max="20"
+        min="0"
+        type="range"
+        value="5"
+      />
+    </div>
+    <script src="js/parallax.js"></script>
   </body>
 </html>
