@@ -1,0 +1,14 @@
+{
+  "name": "free-code-camp-js-game-dev-practice",
+  "version": "1.0.0",
+  "description": "Exercises for learning JS game development with Free Code Camp tutorials",
+  "main": "script.js",
+  "scripts": {
+    "serve": "browser-sync start --server --files \"*.html, *.css, *.js\"",    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.29.3"
+  }
+}
