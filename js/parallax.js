@@ -19,11 +19,12 @@ backgroundLayer5.src = "backgroundLayers/layer-5.png";
 
 window.addEventListener("load", function () {
   const slider = document.getElementById("slider");
-  slider.value = gameSpeed;
   const showGameSpeed = document.getElementById("showGameSpeed");
+
+  slider.value = gameSpeed;
   showGameSpeed.innerHTML = gameSpeed;
+
   slider.addEventListener("change", function (e) {
-    console.log(e.target.value);
     gameSpeed = e.target.value;
     showGameSpeed.innerHTML = gameSpeed;
   });
@@ -40,14 +41,15 @@ window.addEventListener("load", function () {
     }
     update() {
       this.speed = gameSpeed * this.speedModifier;
+
       if (this.x <= -this.width) this.x = 0;
-      this.x = Math.floor(this.x - this.speed);
+      this.x = this.x - this.speed;
     }
     draw() {
       ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
       ctx.drawImage(
         this.image,
-        this.x2 + this.width,
+        this.x + this.width,
         this.y,
         this.width,
         this.height
